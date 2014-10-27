@@ -1,0 +1,13 @@
+=omega-reset($nth)
+  &:nth-child(#{$nth})
+    margin-right: flex-gutter()
+  &:nth-child(#{$nth}+1)
+    clear: none
+
+=btn($btn-bg: $green)
+  +transition(background-color .2s)
+  @extend %btn-base
+  background-color: darken($btn-bg, 10)
+  &:hover
+    +transition(background-color .2s)
+    background-color: darken($btn-bg, 15)

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ title }} | {{ _site_name }}</title>
+
+  <link rel="stylesheet" href="{{ theme:css }}">
+</head>
+<body class="{{ _template }}">
+
+  {{ theme:partial src="layout/header" }}
+
+  <div class="main">
+      {{ layout_content }}
+  </div>
+
+  {{ theme:partial src="layout/footer" }}
+
+  {{ theme:partial src="javascript-includes" }}
+</body>
+</html>
