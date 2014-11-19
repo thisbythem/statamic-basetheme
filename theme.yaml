@@ -2,4 +2,4 @@ global:
   site_keywords: some keywords
   site_description: A description of this site.
 
-twitter_username: twitter
+site_twitter_username: twitter
