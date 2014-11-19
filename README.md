@@ -3,11 +3,14 @@ Everything to get you going with a Statamic theme.
 
 ## Setup
 Download and drop this into your \_themes directory. You'll need to
-rename this folder to your theme name. You'll also need to rename
-`sass/sitename.sass` to your theme name.
+rename this folder to your theme name. You'll also need to rename the following items:
 
-We use our [statamic-js](https://github.com/thisbythem/statamic-js) repo
-for our scripts. You'll either need to download that repo and put that
+* `sass/sitename.sass`
+* `js/sitename.js`
+* `sass/base/_variables.sass`: $themePath variabe
+
+We stuff our [site-behaviors](https://github.com/thisbythem/site-behaviors) repo
+into the js directory for all that fancy js stuff. You'll either need to download that repo and put that
 in the js directory, or add it as a submodule if you wish to stay
 up-to-date with all that goodness.
 
