@@ -1,0 +1,51 @@
+{{ body }}
+  {{ if type == 'intro_text_set' }}
+    <div class="intro-matrix-text">
+      {{ text }}
+    </div>
+  {{ elseif type == 'text_set' }}
+    <div class="matrix-text">
+      {{ text }}
+    </div>
+  {{ elseif type == 'section_heading_set' }}
+    <h3 class="matrix-section-heading">
+      {{ section_heading }}
+    </h3>
+    <hr class="narrow">
+  {{ elseif type == 'section_sub_heading_set' }}
+    <p class="matrix-section-sub-heading">
+      {{ section_sub_heading }}
+    </p>
+  {{ elseif type == 'pull_quote_set' }}
+    <blockquote>
+      <p>{{ quote }}</p>
+      {{ if source }}
+      <cite>
+        {{ source }}
+      </cite>
+      {{ /if }}
+    </blockquote>
+  {{ elseif type == 'link_set' }}
+    <p class="matrix-link"><a href="{{ url }}">{{ title }} <i class="fa fa-arrow-right"></i></a></p>
+  {{ elseif type == 'file_set' }}
+    <p class="matrix-file"><a href="{{ file }}" class="matrix" target="_blank">{{ button_text }} <i class="fa fa-download"></i></a></p>
+  {{ elseif type == 'image_set' }}
+    <figure class="matrix-image add-box">
+      <img src="{{ transform src="{ photo }" width="800" quality="100" upsize="yes" }}" alt="{{ caption }}">
+      {{ if caption }}
+        <figcaption>{{ caption }}</figcaption>
+      {{ endif }}
+    </figure>
+  {{ elseif type == 'video_set' }}
+    <div class="martix-video-wrap">
+      {{ youtube url="{ youtube_url }" }}
+      <p class="matrix-video-caption">{{ video_caption }}</p>
+    </div>
+  {{ elseif type == 'gallery_set' }}
+    <div class="matrix-gallery">
+      {{ images }}
+      <figure class="matrix-gallery-image"><a href="{{ photo }}" title="{{ caption }}"><img src="{{ transform src="{ photo }" width="300" height="300" action="smart" quality="100" }}" alt="{{ caption }}" /></a></figure>
+      {{ /images }}
+    </div>
+  {{ /if }}
+{{ /body }}
