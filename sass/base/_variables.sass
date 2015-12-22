@@ -4,25 +4,46 @@ $max-width: 1140px
 // FONTS
 $serif: Georgia, serif
 $sans: Helvetica, sans-serif
+$display: cursive
 
-$body-font: $serif
-$heading-font: $sans
-$display: $serif
+$body-font: $sans
+$heading-font: $serif
+
 
 // SHADES
-$black: #000
-$white: #FFF
+$black: #00000
+$white: #ffffff
+$off-white: #faf7f5
+$gray-lightest: #e8e2df
+$gray-lighter: #f2eeeb
+$gray-light: #DDD5D0
+$gray-medium: #A79D9E
+$gray-dark: #494053
 
 // COLORS
+$red: red
+$green: green
+$blue: blue
+$yellow: yellow
+$orange: orange
+
+// SITE COLOR VARIABLES
+$global-link-color: $blue
+$global-text-color: $gray-dark
 
 // BREAKPOINTS
 $tinyScreenUp: new-breakpoint(min-width 320px 4)
 $miniScreenUp: new-breakpoint(min-width 500px)
 $smallScreenUp: new-breakpoint(min-width 768px)
+$smallScreenDown: new-breakpoint(max-width 768px)
 $mediumScreenUp: new-breakpoint(min-width 980px)
+$mediumScreenDown: new-breakpoint(max-width 980px)
+$miniToMediumScreen: new-breakpoint(min-width 500px max-width 980px)
 $largeScreenUp: new-breakpoint(min-width 1120px)
 $hugeScreenUp: new-breakpoint(min-width 1300px)
 $maxScreenUp: new-breakpoint(min-width 1600px)
 
+$shortScreenUp: new-breakpoint(min-width 768px min-height 1000px)
+
 // THEME
-$themePath: '/_themes/sitename'
+$themePath: '/_themes/idp'

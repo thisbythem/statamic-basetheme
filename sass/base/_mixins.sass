@@ -4,13 +4,63 @@
   &:nth-child(#{$nth}+1)
     clear: none
 
-=btn($btn-bg: $green)
+=btn($btn-bg: $global-link-color)
   +transition(background-color .2s)
   @extend %btn-base
-  background-color: darken($btn-bg, 10)
+  background-color: $btn-bg
   &:hover
     +transition(background-color .2s)
-    background-color: darken($btn-bg, 15)
+    background-color: tint($btn-bg, 15)
+
+=btn-outline($btn-border: $global-link-color, $btn-color: $global-link-color)
+  +transition(border-color .2s, color .2s)
+  @extend %btn-base
+  padding: 1.15em 2.15em
+  background: none
+  border: 2px solid $btn-border
+  color: $btn-color
+  &:hover
+    +transition(background .2s, border-color .2s, color .2s)
+    background: none
+    border-color: shade($btn-border, 15)
+    color: darken($btn-color, 10)
+
+=btn-small($btn-bg: $global-link-color)
+  padding: .75em 1.5em
+  font-size: .675em
+  +media($smallScreenUp)
+    font-size: .575em
+
+=link-color($link-color-1: $global-link-color, $link-color-2: $global-link-color)
+  +transition(color .2s)
+  color: $link-color-1
+  &:hover, &:active
+    +transition(color .2s)
+    color: darken($link-color-2, 10)
+
+=section-padding($top-pad: 4em)
+  padding: 3rem 0
+  +media($smallScreenUp)
+    padding: 5rem 0
+    &:first-of-type
+      padding-top: $top-pad
+
+=section-padding-lg($top-pad: 4em)
+  padding: 2rem 0
+  +media($smallScreenUp)
+    padding: 9rem 0
+    &:first-of-type
+      padding-top: $top-pad
+
+=section-padding-sm
+  padding: 1.5rem 0
+  +media($smallScreenUp)
+    padding: 3.5rem 0
+
+=last-p
+  p:last-of-type
+    margin-bottom: 0
+
 
 =background-image($filename)
   background-image: url("#{$themePath}/img/#{$filename}")

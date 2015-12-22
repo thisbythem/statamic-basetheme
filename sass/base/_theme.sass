@@ -1,0 +1,56 @@
+// LAYOUT GLOBALS
+.container
+  +outer-container
+  padding: 0 1em
+  &.medium
+    max-width: 54em
+  &.narrow
+    max-width: 38em
+
+// GLOBAL CLASSES
+.row
+  +row
+
+.btn
+  +btn
+
+.btn-small
+  +btn-small
+
+.btn-outline
+  +btn-outline
+
+//SITE-STYLES
+body
+  background: $white
+p
+  margin-top: 0
+a
+  +transition(color .2s)
+  color: $global-link-color
+  text-decoration: none
+  &:hover
+    +transition(color .2s)
+    color: darken($global-link-color, 10)
+img
+  vertical-align: bottom
+  max-width: 100%
+
+ul
+  margin: 0
+  padding: 0
+li
+  list-style: none
+
+b
+  font-weight: 900
+
+hr
+  margin: 1em 0
+  border: none
+  border-bottom: 1px solid
+  border-color: $black
+  &.thick
+    border-width: 5px
+  &.narrow
+    margin: 20% auto

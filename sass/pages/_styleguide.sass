@@ -1,0 +1,55 @@
+//OVERRIDES BELOW
+.styleguide
+
+
+// PAGE STYLES
+.styleguide-wrap
+  margin-top: 2rem
+  margin-bottom: 4rem
+
+  .logo
+    +size(auto 2em)
+
+  section:last-of-type
+    margin-bottom: 3rem
+  .add-bottom-pad
+    padding-bottom: 1rem
+
+.styleguide-font-block
+  +span-columns(4)
+  padding-bottom: 1.5rem
+  p
+    margin: .5rem 0 0
+    font-size: 1.5em
+    line-height: 1.2
+
+  .small
+    font-size: .675rem
+    color: $gray-medium
+
+  .headline-font
+    letter-spacing: -.03em
+
+  .fa
+    display: inline-block
+    width: 1.25em
+    margin-top: .5rem
+
+.styleguide-color-block
+  float: left
+  margin-bottom: 1rem
+  padding: .5em
+  border: 1px solid $gray-lighter
+  &:not(:last-of-type)
+    margin-right: 1rem
+  span
+    display: block
+    +size(5em)
+  p
+    font-size: .775em
+    margin: .5rem 0 0
+
+  .small + .small
+    font-size: .675rem
+    color: $gray-medium
+

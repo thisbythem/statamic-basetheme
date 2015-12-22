@@ -3,23 +3,12 @@ html
 
 body
   font: normal 100%/1.5 $body-font
-  color: $black
-
-p
-  line-height: 1.5em
+  color: $global-text-color
 
 h1, h2, h3, h4, h5, h6
   font-family: $heading-font
-  font-weight: 300
-  text-transform: uppercase
+  font-weight: bold
   line-height: 1.2
-
-h3, h4
-  font-weight: 600
-  letter-spacing: .05em
-
-img
-  max-width: 100%
 
 +media($tinyScreenUp)
   body
@@ -42,5 +31,5 @@ img
     font-size: 125%
 
 +media($hugeScreenUp)
-  body.blog
+  body
     font-size: 130%
